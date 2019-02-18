@@ -1,8 +1,17 @@
 language: node_js
 node_js:
-  - v11
-  - v10
-  - v8
-  - v6
-  - v4
+- v11
+- v10
+- v8
+- v6
+- v4
 after_script: cat ./coverage/lcov.info | coveralls
+before_deploy: npm run build
+deploy:
+  provider: npm
+  email: jonniespratley@gmail.com
+  api_key:
+    secure: BDw8RNPuXa5INvjlemFsS4VYXDtcg14ABa5mI3sNerzDorCO1t9vlu6ny9b96o29HcTtVVBr0sSWRRmUp6EHTFdUNdrQ+nR+VwHcTXqcnw/iawMlkm/14SwnOtp6nZpFu/2E43TIUH2+D1YKYkTWon56Zl1Opk0B8d0MilNU/wXTw2hQbbLX8V7HRAWItLJtJCDr/5aDJtRV4Cxvc+bbRQnnzfxhmxh/Dmt8+lfmEpDKEpjgQha4Hbme8YAQmis0aCRQPq5smpwHlokNHWheYbc8TexNKAWy25mgqhoMGUuaiKoyFjZ59IWQtK+Wv6VX5VynQjRXtmab2JGUZMYpgYDmgTVnp+8u+u4DnRDcG4yK11vzRdbBr5/MlZHyTKZ6ewpHSnMDGJRAgLzTJwbIlyPSxSJRdlvFpuMDmcJ6jSwIJIbgKAq04I54aAf6dDU6Xg9ywXi0dC0k/VH96rV5DBz+U16dcqFV1whSQh1cOLzxxVRqBuNHVU6pajHxHMzxFw3B+6unlZL4+JLmb+4I9dNH1WW+oaloYjyi4PyNoL8z/qB99KhL/AedWRoNszjsjK9M/Kh/Vr03lGXilK3170NLAkC6j3kbMpdhv6fbL6UxM4LxBTVXu3EMl2YtU2O/hhpTMqKV/TD1cNcyIgHRDu8G/XBAArztoBx5YwPyqew=
+  on:
+    tags: true
+    repo: jonniespratley/my-node-lib

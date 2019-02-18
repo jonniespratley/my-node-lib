@@ -1,6 +1,6 @@
 {
-  "name": "my-node-lib",
-  "version": "0.0.1",
+  "name": "@jsapps/my-node-lib",
+  "version": "0.0.0",
   "description": "A sample node module library.",
   "homepage": "",
   "author": {
