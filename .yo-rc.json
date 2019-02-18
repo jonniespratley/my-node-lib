@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Jonnie Spratley",
+      "authorEmail": "jonniespratley@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}
